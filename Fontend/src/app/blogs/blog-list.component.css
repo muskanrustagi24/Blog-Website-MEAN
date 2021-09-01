@@ -1,0 +1,9 @@
+.card {
+    margin-left: 30px;
+}
+
+body {
+    background-image: url("../../assets/images/bg.jfif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

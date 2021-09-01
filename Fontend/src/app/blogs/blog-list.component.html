@@ -1,0 +1,24 @@
+<body>
+    <div class="row">
+        <div class="col" *ngIf='blogs.length'>
+            <section class="blogs" *ngFor='let blog of blogs'>
+                    <div class="card">
+                        <h5 class="card-header">
+                        {{blog.category}}
+                        </h5>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                            {{blog.title}}
+                            </h5>
+                            <p class="card-text">
+                            {{blog.content}}
+                            </p>
+                            <a class="btn btn-primary" 
+                            [routerLink]="['/blogs', blog._id]">Read More</a>
+                        </div>
+                    </div>
+            </section>
+        </div>
+        <div class="col"></div>
+    </div>
+</body>

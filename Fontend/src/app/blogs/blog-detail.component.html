@@ -1,0 +1,36 @@
+<div class="card" *ngIf='blog'>
+    <div class="card-header" style="font-weight: bold;">
+        {{blog.title}}
+    </div>
+    <div class='card-body'>
+        <div class='row'>
+            <div class='col-md-8'>
+                <div class='row'>
+                    <div class='col-md-4'>Category:</div>
+                    <div class='col-md-8'>{{blog.category}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-4'>Content:</div>
+                    <div class='col-md-8'>{{blog.content}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-outline-secondary"
+            style="width: 80px"
+            (click)='onBack()'>
+            <i class='fa fa-chevron-left'></i> Back
+        </button>
+        <button class="btn btn-primary"
+            style="width: 80px; margin-left: 10px;">
+            <a style="color: white;" 
+            [routerLink]="['/edit', blog._id]"> Edit </a>
+        </button>
+       <button class="btn btn-danger"
+        style="width: 80px; margin-left: 10px;"
+        (click)='onDelete(blog._id)'>
+        Delete
+       </button>
+    </div>
+</div>
